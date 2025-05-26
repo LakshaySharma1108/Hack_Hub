@@ -1,0 +1,28 @@
+{% extends "base_file.html" %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href={% static "support.css" %}>
+<link rel="stylesheet" href={% static 'header.css' %}>
+{% endblock link %}
+
+{% block body %}
+
+    <section class="about-section">
+        <div class="container">
+          <div class="about-content">
+            <h1 class="title">About Us</h1>
+            <p class="description">
+              Welcome to our website! We are a passionate team dedicated to creating innovative solutions and delivering exceptional results. 
+              With expertise in web development, design, and strategy, we strive to help our clients achieve their goals effectively.
+            </p>
+            <a href="{% url "contact" %}" class="btn-primary">Contact Us</a>
+          </div>
+          <div class="about-image">
+            <img  src="{{ MEDIA_URL }}TeamImage.jpg" alt="About Us">
+          </div>
+        </div>
+      </section>
+
+      
+{% endblock body %}

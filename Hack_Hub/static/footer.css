@@ -1,0 +1,36 @@
+ /* Footer styling */
+ .footer {
+    display: flex;
+    justify-content: space-between; /* Aligns sections left, center, and right */
+    align-items: center; /* Vertically aligns items */
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+  }
+  
+  /* Footer sections */
+  .footer-section {
+    flex: 1; /* Ensures equal space distribution */
+  }
+  
+  .footer-section.center {
+    text-align: center; /* Centers the content */
+  }
+  
+  .footer-section.right {
+    text-align: right; /* Right-aligns the content */
+  }
+  
+  /* Links in the footer */
+  .footer-section.right a {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  
+  .footer-section.right a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  

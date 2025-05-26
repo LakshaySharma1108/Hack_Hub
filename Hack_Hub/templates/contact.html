@@ -1,0 +1,40 @@
+{% extends "base_file.html" %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href={% static "contact.css" %}>
+<link rel="stylesheet" href={% static 'header.css' %}>
+{% endblock link %}
+
+{% block body %}
+  <section class="contact-section">
+    <div class="container">
+      <h1 class="title">Contact Us</h1>
+      <p class="description">Fill out the form below to submit your team's details. We will get back to you soon!</p>
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="team-name">Team Name</label>
+          <input type="text" id="team-name" name="team-name" placeholder="Enter your team name" required>
+        </div>
+        <div class="form-group">
+          <label for="leader-name">Team Leader Name</label>
+          <input type="text" id="leader-name" name="leader-name" placeholder="Enter the leader's name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Team Leader Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter the leader's email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter the leader's phone number" required>
+        </div>
+        <div class="form-group">
+          <label for="members">Team Members</label>
+          <textarea id="members" name="members" rows="4" placeholder="List all team members' names, separated by commas" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit"><a href="{% url "support" %}">Submit</a> </button>
+      </form>
+    </div>
+  </section>
+
+{% endblock body %}

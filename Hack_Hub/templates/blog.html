@@ -1,0 +1,38 @@
+{% extends "base_file.html" %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href={% static "blog.css" %}>
+<link rel="stylesheet" href={% static 'header.css' %}>
+{% endblock link %}
+
+{% block body %}
+
+<main>
+        <section id="blog">
+            <h1>Latest Blog Posts</h1>
+            <article class="blog-post">
+                <h2>Preparing for the Upcoming Hackathon</h2>
+                <p class="date">January 20, 2025</p>
+                <p class="content">Get ready for our upcoming hackathon! Here are some tips to help you make the most of this event...</p>
+                <a href="{% url "events" %}" class="read-more">Read more</a>
+            </article>
+
+            <article class="blog-post">
+                <h2>Why Hackathons Are Important for Developers</h2>
+                <p class="date">January 15, 2025</p>
+                <p class="content">Hackathons provide the perfect environment for developers to challenge themselves and build something amazing in a short amount of time...</p>
+                <a href="post2.html" class="read-more">Read more</a>
+            </article>
+
+            <article class="blog-post">
+                <h2>How to Form the Perfect Hackathon Team</h2>
+                <p class="date">January 10, 2025</p>
+                <p class="content">Forming a great team is crucial to your hackathon success. Here’s how to find the best teammates and collaborate effectively...</p>
+                <a href="" class="read-more">Read more</a>
+            </article>
+        </section>
+    </main>
+
+
+{% endblock body %}

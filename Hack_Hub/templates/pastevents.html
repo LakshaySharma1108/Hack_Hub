@@ -1,0 +1,86 @@
+{% extends "base_file.html" %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href={% static "pastevents.css" %}>
+<link rel="stylesheet" href={% static 'header.css' %}>
+{% endblock link %}
+
+{% block body %}
+
+    <div class="back">
+        <section class="events-section" id="events">
+            <h1>Past Events</h1>
+            <h3>Relive the highlights of groundbreaking hackathons</h3>
+            <div class="Back">
+                <div class="events-container">
+                    <div class="event-card" id="event-card1">
+                        <span class="button">
+                            <button class="pastdate"><b>2 days ago</b></button>
+                        </span>
+                        <img src="{{ MEDIA_URL }}soni defai.webp" alt="Event 4">
+                        <h3>Sonic DeFAI Hackathon</h3>
+                        <b><p>Present your startup idea and get feedback from investors.</p></b>
+                        <span class="date">December 20, 2024</span>
+                        <button class="more-details-btn">More Details</button>
+                    </div>
+                    
+
+                    <div class="event-card" id="event-card2">
+                        <span class="button">
+                            <button class="pastdate"><b>2 days ago</b></button>
+                        </span>
+                        <img src="{{ MEDIA_URL }}genai.jpeg" alt="Event 2">
+                        <h3> Workshop on AI</h3>
+                       <b> <p>Learn from the experts and build AI projects in this workshop.</p></b>
+                        <span class="date">February 10, 2025</span>
+                        <button class="more-details-btn">More Details</button>
+                    </div>
+
+                    <div class="event-card" id="event-card3">
+                        <span class="button">
+                            <button class="pastdate"><b>2 days ago</b></button>
+                        </span>
+                        <img src="{{ MEDIA_URL }}startup.jpeg" alt="Event 3">
+                        <h3> Startup Pitch</h3>
+                        <b><p>Present your startup idea and get feedback from investors.</p></b>
+                        <span class="date">February 20, 2025</span>
+                        <button class="more-details-btn">More Details</button>
+                    </div>
+                    <div class="event-card" id="event-card4">
+                        <span class="button">
+                            <button class="pastdate"><b>2 days ago</b></button>
+                        </span>
+                        <img src="{{ MEDIA_URL }}gGDg.jpeg" alt="Event 4">
+                        <h3> Google Solutions</h3>
+                       <b> <p>Present your startup idea and get feedback from investors.</p></b>
+                        <span class="date">February 20, 2025</span>
+                        <button class="more-details-btn">More Details</button>
+                    </div>
+                    <div class="event-card" id="event-card5">
+                        <span class="button">
+                            <button class="pastdate"><b>2 days ago</b></button>
+                        </span>
+                        <img src="{{ MEDIA_URL }}icpc.jpeg" alt="Event 4">
+                        <h3> ICPC Coding Competition</h3>
+                       <b> <p>Present your startup idea and get feedback from investors.</p></b>
+                        <span class="date">February 20, 2025</span>
+                        <button class="more-details-btn">More Details</button>
+                    </div>
+                    <div class="event-card" id="event-card6">
+                        <span class="button">
+                            <button class="pastdate"><b>2 days ago</b></button>
+                        </span>
+                        <img src="{{ MEDIA_URL }}dynamic.jpeg" alt="Event 1">
+                        <h3> Dynamic Programming</h3>
+                       <b> <p>Join us for a coding marathon with exciting prizes!</p></b>
+                        <span class="date">January 30, 2025</span>
+                        <button class="more-details-btn">More Details</button>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+{% endblock body %}

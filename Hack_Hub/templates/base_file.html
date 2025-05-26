@@ -1,0 +1,244 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width= , initial-scale=1.0" />
+   {% block title %} <title>Home - HackHub</title> {% endblock title %}
+
+   {% block many_links %}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    {% endblock many_links %}
+
+    {% block link %}
+    <link rel="stylesheet" href="/CSS Files/style.css" />
+    <link rel="stylesheet" href={% static 'header.css' %}>
+    {% endblock link %}
+
+    {% block style %}
+<style>
+  /* Header / Navigation Bar */
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(0, 0, 62);
+  }
+
+  .left {
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left img {
+    width: 65px;
+    height: 65px;
+    border-radius: 45px;
+    opacity: 80%;
+    margin-top: 16px;
+    margin-bottom: 13px;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav ul li {
+    list-style: none;
+    margin: 0 23px;
+    cursor: pointer;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+  }
+
+  nav ul li a:hover {
+    color: rgb(173, 173, 194);
+    font-size: 0.97rem;
+  }
+
+  /* Signup/Login Links */
+  #signup {
+    margin-left: 2rem;
+    margin-right: -8rem;
+  }
+
+  #signup a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .signin {
+    margin-right: 2rem;
+  }
+
+  .right {
+    display: flex;
+  }
+
+  .login {
+    margin-left: -20px;
+  }
+
+  /* Underline animation for nav links */
+  #menu a {
+    position: relative;
+  }
+
+  #menu a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  #menu a:hover::after {
+    transform: scaleX(1);
+  }
+
+  /* Buttons in header */
+  .buttons a {
+    text-decoration: none;
+    color: inherit;
+  }
+</style>
+{% endblock style %}
+
+
+
+  </head>
+
+  
+  <body>
+
+    {% block header %}
+    <header>
+      <nav>
+        <div
+          class="left"
+          style="
+            font-family: 'Poppins', 'sans-serif';
+            font-size: 2rem;
+            font-weight: 700;
+          "
+        >
+          <img src="{{ MEDIA_URL }}newlogo.jpeg" alt="logo" />Hack-Hub
+        </div>
+        <div class="right">
+          <ul id="menu">
+            <li>
+              <a
+                href={% url "index" %}
+                class="overview"
+                style="font-family: 'Poppins', 'sans-serif'; font-size: 1rem"
+                ><b>Home</b></a
+              >
+            </li>
+            <li><a href={% url "events" %}>Events</a></li>
+            <li><a href={% url "past_events" %}>Past Events</a></li>
+            <li><a href={% url "blog" %}>Blogs</a></li>
+           <ul id="signup">
+                <b class="signin"><a href="/colorlib-regform-7/signin.html">Sign In</a></b>
+                <b class="signup"><a href="/colorlib-regform-7/signup.html">Sign up</a></b>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    {% endblock header %}
+
+
+    {% block body %}
+
+
+    {% endblock body %}
+
+    {% block footer %}
+
+    <footer>
+      <div class="footer">
+        <div class="footer-first">
+          <h3
+            style="
+              font-family: 'Maven Pro', 'serif';
+              font-weight: 700;
+              font-size: 2rem;
+            "
+          >
+            HackHub
+          </h3>
+          <img
+            src="{{ MEDIA_URL }}newlogo.jpeg"
+            alt="logo"
+            style="width: 65px; height: 65px"
+          />
+        </div>
+        <div class="footer-second">
+          <ul>
+            <h4>Hackers Tour</h4>
+            <li>pricing</li>
+            <li>blog</li>
+            <li>Services</li>
+          </ul>
+        </div>
+        <div class="footer-third">
+          <ul>
+            <h4>About Us</h4>
+            <li>Careers</li>
+            <li>our team</li>
+            <li>newsroom</li>
+            <li>status</li>
+          </ul>
+        </div>
+        <div class="footer-fourth">
+          <ul>
+            <h4>Solutions and Skills</h4>
+            <li>Set up skill strategy</li>
+            <li>Interviews</li>
+            <lli>video solutions</lli>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-rights">
+        Copyright &#169; www.HackHub.com | All Rights Reserved
+      </div>
+    </footer>
+
+    {% endblock footer %}
+
+    {% block js %}
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Experience", "Projects", "Skills"],
+        typeSpeed: 60,
+      });
+    </script>
+    {% endblock js %}
+  </body>
+
+  
+</html>

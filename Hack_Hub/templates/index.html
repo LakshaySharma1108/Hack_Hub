@@ -1,0 +1,54 @@
+{% extends "base_file.html" %}
+{% load static %}
+
+
+{% block link %}
+<link rel="stylesheet" href={% static "style.css" %}>
+<link rel="stylesheet" href={% static 'header.css' %}>
+{% endblock link %}
+
+{% block body %}
+
+
+    <main>
+      <section class="firstSection">
+        <div class="leftSection">
+          WorldWide <span class="purple">Hackathon</span>
+          <div>
+            For Future Winners ignite ideas and build tomorrow's innovations by
+            their-
+          </div>
+
+          <span id="element"></span>
+          <div class="buttons">
+            <button class="custom-btn btn-1 about"> <a href="./support.html"> About</a></button>
+          </div>
+        </div>
+        <div class="rightSection">
+          <img src="{{ MEDIA_URL }}image1.jpg" alt="hackathon" />
+        </div>
+      </section>
+      <hr />
+      <div class="container">
+        <div class="box left-data">
+          <h2 id="heading">Identify top contenders</h2>
+          Identify top contenders and invite them to meet your team using
+          data-driven decisions that help level the playing field for developers
+          everywhere.Ditch out of reach and out of touch interview questions
+          about golf balls and 747s — and turn off your clunky screen share for
+          good. Code, create, and collaborate with an IDE built to showcase
+          real-world skills in a real-world environment.
+        </div>
+        <!-- bar-graph -->
+
+        <div class="box right-data chart">
+          <div class="bar" style="height: 70%" title="70%">Januaray</div>
+          <div class="bar" style="height: 50%" title="50%">February</div>
+          <div class="bar" style="height: 80%" title="80%">March</div>
+          <div class="bar" style="height: 60%" title="60%">April</div>
+          <div class="bar" style="height: 90%" title="90%">May</div>
+        </div>
+      </div>
+    </main>
+
+{% endblock body %}
