@@ -23,7 +23,7 @@ Hosting	GitHub Pages (static) / PythonAnywhere / Render / Vercel (via API)
    bash
    Copy
    Edit
-   git clone https://github.com/yourusername/HackHub.git
+   git clone https://github.com/LakshaySharma1108/Hack_Hub.git
    cd HackHub
 2. Create & Activate Virtual Environment
    bash
@@ -72,9 +72,6 @@ Create a new branch (git checkout -b feature-name)
 Commit your changes (git commit -m "Added feature")
 
 Push and create a Pull Request
-
-📄 License
-Distributed under the MIT License. See LICENSE for more information.
 
 🤝 Acknowledgements
 Built using Django and open-source love ❤️
